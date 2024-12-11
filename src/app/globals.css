@@ -19,3 +19,26 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.botao {
+  @apply p-2 bg-red-700 rounded-md hover:bg-red-800;
+  @apply text-white;
+  @aplly;
+}
+
+.botao-laranja {
+  @apply bg-orange-700 hover:bg-orange-900;
+}
+
+.botao-azul {
+  @apply bg-blue-700 hover:bg-blue-900;
+}
+
+.botao-verde {
+  @apply bg-green-700 hover:bg-green-900;
+}
+
+.inputTexto{
+	@apply bg-black p-2 m-2 text-white;
+	@apply rounded-md
+}

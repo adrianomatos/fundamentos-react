@@ -1,26 +1,30 @@
 import Cabecalho from "@/components/Cabecalho";
 import Conteudo from "@/components/Conteudo";
-import Menu from "@/components/Menu";
 import Rodape from "@/components/Rodape";
+import AreaLateral from "./AreaLateral";
+
+interface PaginaProps {
+	titulo: string
+	subtitulo: string
+	children: any
+}
 
 export default function Pagina(props: any) {
 	console.log(props);
 
 	const ano = new Date().getFullYear();
 	return (
-		<div className="flex flex-col h-screen">
+		<div className="flex h-screen">
 
-			<Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
+			<AreaLateral className={props.className} />
 
-			<div className="flex flex-1">
-				<Menu />
+			<div className="flex flex-col flex-1">
+				<Cabecalho className={props.className} titulo={props.titulo} subtitulo={props.subtitulo} />
 
-				<Conteudo>
-					{props.children}
-				</Conteudo>
+				<Conteudo className={props.className}>{props.children}</Conteudo>
+
+				<Rodape className={props.className} msgA="Desenvolvido por " msgB={`Todos os direitos reservados ® ${ano}`} />
 			</div>
-
-			<Rodape msgA="Desenvolvido por " msgB={`Todos os direitos reservados ® ${ano}`} />
 		</div>
 	);
 }

@@ -1,5 +1,5 @@
 export default function Teste() {
 	return (
-		<h1>Teste</h1>
+		<button className="botao botao-verde">Teste</button>
 	)
 }

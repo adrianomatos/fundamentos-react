@@ -1,0 +1,7 @@
+h1, h2, h3 {
+  all: unset; /* Remove todos os estilos */
+  display: block; /* Reaplica o comportamento padrão de blocos */
+  font-weight: bold; /* Reaplica estilo padrão de títulos */
+  font-size: initial; /* Reaplica o tamanho padrão */
+	color:black;
+}
